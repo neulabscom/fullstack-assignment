@@ -1,0 +1,16 @@
+{
+  "name": "@neulabs/bff",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node ./index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^3.6.4",
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0"
+  }
+}
