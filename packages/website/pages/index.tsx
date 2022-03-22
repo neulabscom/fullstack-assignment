@@ -28,6 +28,10 @@ const Home: NextPage = () => {
           }
 
           img {
+            width: 100%;
+          }
+
+          img.logo {
             display: block;
             width: 240px;
             margin: 50px auto;
@@ -45,58 +49,62 @@ const Home: NextPage = () => {
           `}
       </style>
       <main>
-        <img src="logo.svg" alt="neulabs logo" />
+        <img className="logo" src="logo.svg" alt="neulabs logo" />
         <h1>Welcome to Neulabs fullstack assignment</h1>
         <p>
           In the{' '}
           <Link href="/posts">
             <a>posts</a>
           </Link>{' '}
-          page you can see a list of post. Posts are fetched with a graphql
-          query from the bff. On the bff the list of posts is mocked.
+          page you will see a (very basic) list of posts. All posts are fetched
+          via graphql query from a BFF layer: the BFF itself retrieves the posts
+          from a (mocked) posts datasource.
         </p>
+        <hr />
         <h2>Step 1:</h2>
         <p>
-          For each post there is a userId field that represents the id of the
-          user author of the post. Currently it is not asked by the client and
-          is not shown, instead we would like to show the name and email of the
-          author by taking it from this rest api:{' '}
-          <code>https://jsonplaceholder.typicode.com/users</code>
+          Every post inside the datasource contains a <code>userId</code> field
+          that maps the id of the user author of the post with the user objects
+          published at this URL:{' '}
+          <code>https://jsonplaceholder.typicode.com/users</code>. You will have
+          to show the name and email of the author alongside with the other
+          information inside the posts list.
         </p>
         <ul>
+          <li>Pay no attention to the UI, at least for now :)</li>
           <li>
-            Do not care about the UI now, will be asked in the next step of the
-            assignment{' '}
+            *DO NOT* fetch the rest api directly from the client: attach the new
+            datasource to the BFF instead
           </li>
           <li>
-            Do not fetch the rest api directly from the client, use the bff
-          </li>
-          <li>
-            Do not mock data in the bff, as we did, use apollo rest datasources
-            instead
+            *DO NOT* mock data inside the BFF as we did for the posts list: use
+            Apollo rest datasources instead
           </li>
           <li>Do not change the post list mocked in the bff</li>
           <li>Do not change posts resolver</li>
-          <li>Add the author field inside the post object</li>
           <li>
-            Do not care about SSR or any other production related stuff, like
+            Pay no attention to SSR or any other production related stuff, like
             env variables, etc
           </li>
         </ul>
+        <hr />
         <h2>Step 2:</h2>
         <p>
-          Stylize the post page using the methodology you prefer, if you know it
-          use emotion. Separate the UI components into a folder where there must
-          be at least the Post component that rappresent a list item. TODO:
-          inserire link grafica
+          Stylize the posts page replicating the UI of the "Ultimi articoli"
+          section of the VitaVi website magazine
+          (https://www.vitavi.it/magazine/) using the approach you prefer (using
+          a css-in-js library like Emotion is considered a plus). Separate the
+          UI components into a folder with at least a <code>Post</code>{' '}
+          component. (use https://randomuser.me/api/portraits/men/--userId--.jpg
+          for the author's avatar image and https://picsum.photos/ random images
+          for the cover).
+          <img src="last-posts-ui.png" alt="neulabs logo" />
         </p>
+        <hr />
         <h2>Step 3:</h2>
         <p>
-          Now we want to do a little logic exercise, unrelated to this specific
-          page. Implement client-side, in the render of component that lists the
-          posts, an algorithm that searches for the adjacent triplet of posts
-          with the shortest possible title length sum and print in console the
-          index of the beginning of the triplet.
+          Apply a 3px red border to the triplet of adjacent posts with the
+          shortest possible title length sum.
         </p>
         <p>E.g. for list of titles:</p>
         <ul>
@@ -112,11 +120,10 @@ const Home: NextPage = () => {
           <li>title three</li>
         </ul>
         <p>
-          and algorithm should return 0, which is the index of the triplet that
-          includes the first 3 titles. If there are several equal short triplets
-          the algorithm should return the index of the first triplet. You can
-          assume that the list length is at lest 3. Only for this part of the
-          assignment limit to use only the for statement. Performance matters.
+          If there are several equal short triplets the algorithm should return
+          the index of the first triplet. You can assume that the list length is
+          at least 3. Only for this part of the assignment limit to use only the
+          for statement. Performance matters.
         </p>
       </main>
     </div>
