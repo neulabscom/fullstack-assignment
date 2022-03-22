@@ -91,13 +91,16 @@ const Home: NextPage = () => {
         <h2>Step 2:</h2>
         <p>
           Stylize the posts page replicating the UI of the "Ultimi articoli"
-          section of the VitaVi website magazine
-          (https://www.vitavi.it/magazine/) using the approach you prefer (using
-          a css-in-js library like Emotion is considered a plus). Separate the
-          UI components into a folder with at least a <code>Post</code>{' '}
-          component. (use https://randomuser.me/api/portraits/men/--userId--.jpg
-          for the author's avatar image and https://picsum.photos/ random images
-          for the cover).
+          section of the VitaVi website magazine (
+          <a href="https://www.vitavi.it/magazine/">
+            https://www.vitavi.it/magazine
+          </a>
+          ) using the approach you prefer (using a css-in-js library like
+          Emotion is considered a plus). Separate the UI components into a
+          folder with at least a <code>Post</code> component. (use{' '}
+          <code>https://randomuser.me/api/portraits/men/--userId--.jpg</code>{' '}
+          for the author's avatar image and <code>https://picsum.photos/</code>{' '}
+          random images for the cover).
           <img src="last-posts-ui.png" alt="neulabs logo" />
         </p>
         <hr />
