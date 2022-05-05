@@ -8,12 +8,19 @@ const GET_POSTS = gql`
       id
       title
       body
+      user{
+        id
+        name
+        email
+      }
     }
   }
 `;
 
 const Posts: NextPage = () => {
   const { data } = useQuery(GET_POSTS);
+  console.log(data);
+
 
   return (
     <div>
