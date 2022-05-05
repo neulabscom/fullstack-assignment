@@ -1,4 +1,3 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { ApolloServer, gql } from 'apollo-server';
 import posts from './posts';
 import fetch from 'cross-fetch';
