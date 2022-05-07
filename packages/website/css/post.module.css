@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .post {
@@ -11,13 +12,17 @@
   border-radius: 32px;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
   align-self: flex-start;
+  height: 400px;
+  overflow: hidden;
+  text-align: left;
 }
 
 .postContainer {
   column-gap: 56px;
   display: grid;
   font-family: "Kumbh Sans", sans-serif;
-  grid-template-columns: 270.65625px 270.65625px 270.65625px;
+  grid-template-columns: calc(33% - 38px) calc(33% - 38px) calc(33% - 38px);
+  max-width: 1152px;
   line-height: 24px;
   margin-bottom: 8px;
   margin-left: 0px;
@@ -30,14 +35,26 @@
   overflow: hidden;
 }
 
+.articleBody {
+  padding: 16px;
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: calc(100% - 160px);
+}
+
 @media only screen and (max-width: 1036px) {
   .postContainer {
-    grid-template-columns: 395px 395px;
+    grid-template-columns: calc(50% - 28px) calc(50% - 28px);
   }
 }
 
 @media only screen and (max-width: 782px) {
   .postContainer {
-    grid-template-columns: 560px;
+    grid-template-columns: 100%;
   }
 }
