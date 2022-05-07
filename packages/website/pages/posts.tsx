@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import styles from "../css/post.module.css";
 
 const GET_POSTS = gql`
   query GetPosts {
@@ -23,18 +24,20 @@ const Posts: NextPage = () => {
 
 
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Posts | Neulabs fullstack assignment</title>
       </Head>
       <main>
         <h1>Post list</h1>
-        {data?.posts?.map(post => (
-          <article key={post.id}>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-          </article>
-        ))}
+        <div className={styles.postContainer}>
+          {data?.posts?.map(post => (
+            <article className={styles.post} key={post.id}>
+              <h1>{post.title}</h1>
+              <p>{post.body}</p>
+            </article>
+          ))}
+        </div>
       </main>
     </div>
   );
