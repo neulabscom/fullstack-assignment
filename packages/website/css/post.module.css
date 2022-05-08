@@ -17,6 +17,42 @@
   text-align: left;
 }
 
+.header {
+  font-family: Comfortaa, Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(18, 71, 52);
+}
+
+.title {
+  font-family: Comfortaa, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgb(18, 71, 52);
+  margin: 0px;
+}
+
+.subTitle {
+  font-family: Comfortaa, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-weight: normal;
+  color: black;
+  margin: 0px;
+}
+
+.published {
+  font-family: Comfortaa, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.author {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0px;
+  margin-left: 8px;
+  font-size: 13px;
+}
+
 .postContainer {
   column-gap: 56px;
   display: grid;
@@ -30,21 +66,36 @@
   margin-top: 8px;
   padding-left: 64px;
   padding-right: 64px;
+  padding-bottom: 24px;
   row-gap: 56px;
   tab-size: 4;
   overflow: hidden;
 }
 
 .articleBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 16px;
-  padding-top: 0px;
+  padding-top: 12px;
   overflow: hidden;
+  justify-content: space-between;
 }
 
-.text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-height: calc(100% - 160px);
+.credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 1036px) {
