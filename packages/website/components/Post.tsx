@@ -8,11 +8,12 @@ type Props = {
   title: string;
   authorID: number;
   postID: number;
+  highlight: boolean;
 }
 
-const Post = ({ category, author, title, authorID, postID }: Props) => {
+const Post = ({ category, author, title, authorID, postID, highlight }: Props) => {
   return (
-    <article className={styles.post} key={postID}>
+    <article className={styles.post + " " + (highlight ? styles.redBorder : "")} key={postID}>
       <Image
         src="https://picsum.photos/200/300"
         objectFit="cover"

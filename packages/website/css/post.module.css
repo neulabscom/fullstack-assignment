@@ -24,6 +24,10 @@
   color: rgb(18, 71, 52);
 }
 
+.redBorder {
+  border: 3px solid red;
+}
+
 .title {
   font-family: Comfortaa, Arial, sans-serif;
   font-size: 20px;
