@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
 import styles from "../css/post.module.css";
+import Avatar from './Avatar';
 
 type Props = {
   category: string;
@@ -28,16 +29,8 @@ const Post = ({ category, author, title, authorID, postID, highlight }: Props) =
         <div>
           <p className={styles.published}>Pubblicato il: 5/5/2022</p>
           <div className={styles.credits}>
-            <div className={styles.row}>
-              <Image
-                src={"https://randomuser.me/api/portraits/men/" + authorID + ".jpg"}
-                objectFit="cover"
-                height="40px"
-                width="40px"
-                className={styles.avatar}
-              />
-              <p className={styles.author}>{author}</p>
-            </div>
+            <Avatar userID={authorID} name={author} />
+            <p className={styles.time}>5 min.</p>
           </div>
         </div>
       </div>
