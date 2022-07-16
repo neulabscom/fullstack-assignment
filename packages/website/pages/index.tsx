@@ -1,11 +1,18 @@
+import { css } from '@emotion/css';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Home: NextPage = () => {
+
+  const homeStyle = `
+    height: 100%;
+    width: 100%;
+  `;
+
   return (
-    <div>
+    <div className={css`${homeStyle}`}>
       <Head>
         <title>Homepage | Neulabs fullstack assignment</title>
         <link

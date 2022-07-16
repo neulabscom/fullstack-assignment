@@ -1,5 +1,6 @@
 import { ApolloServer, gql } from 'apollo-server';
 import posts from './posts';
+import authors from './authors';
 
 const typeDefs = gql`
   type Post {
@@ -9,14 +10,24 @@ const typeDefs = gql`
     userId: ID
   }
 
+  type Author {
+    id: ID
+    name: String
+    username: String
+    email: String
+  }
+
   type Query {
     posts: [Post]
+    authors: [Author]
   }
+
 `;
 
 const resolvers = {
   Query: {
     posts: () => posts,
+    authors: () => authors,
   },
 };
 
