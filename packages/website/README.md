@@ -1,3 +1,52 @@
+
+
+
+# Step 1
+
+
+Every post inside the datasource contains a `userId` of the post's author
+
+User objects published at this URL: `https://jsonplaceholder.typicode.com/users`
+
+Show the `name` and `email` of the author alongside with the other information `inside the posts list`
+
+
+- *DO NOT* fetch the rest api directly from the client: attach the new datasource to the BFF instead
+- *DO NOT* mock data inside the BFF as we did for the posts list: use Apollo rest datasources instead
+- Do not change the post list mocked in the bff
+- Do not change posts resolver
+- Pay no attention to SSR or any other production related stuff, like env variables, etc
+
+
+# Step 2
+
+Stylize the posts page replicating the UI of `"Ultimi articoli" section` in `https://www.vitavi.it/magazine`
+
+Emotion is considered a plus
+
+`Separate the UI components` into a folder with at least a Post component
+
+author's avatar image with `https://randomuser.me/api/portraits/men/--userId--.jpg`
+
+for the cover use random `https://picsum.photos/`
+
+
+
+# Step 3
+
+Apply a `3px red border` to the `triplet of adjacent posts` with the `shortest` possible title length sum
+
+can assume that the list length is at least 3
+
+assignment limit to use `only the for statement` for the algorithm
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
