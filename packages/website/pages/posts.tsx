@@ -101,7 +101,6 @@ const Posts: NextPage = () => {
         <div className={css`${postArticleStyle}`}>
           {postsWithAuthor?.map((post: PostWithData, i) => (
             <PostArticle key={'article-' + i} {...post}></PostArticle>
-            
           ))}
         </div>
       </main>

@@ -35,12 +35,6 @@ const PostFooter = (props) => {
         margin-right: 10px;
       }
     }
-
-    .email {
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-    }
   `;
 
   return (
@@ -53,9 +47,6 @@ const PostFooter = (props) => {
             {name}
           </div>
         </div>
-        {/* <div className='email'>
-          {email}
-        </div> */}
       </div>
   );
 };
