@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
-const Home: NextPage = () => {
+const Home: NextPage = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Head>
         <title>Homepage | Neulabs fullstack assignment</title>
         <link
@@ -90,8 +90,8 @@ const Home: NextPage = () => {
         <hr />
         <h2>Step 2:</h2>
         <p>
-          Stylize the posts page replicating the UI of the "Ultimi articoli"
-          section of the VitaVi website magazine (
+          Stylize the posts page replicating the UI of the `&quot;`Ultimi
+          articoli`&quot;` section of the VitaVi website magazine (
           <a href="https://www.vitavi.it/magazine/">
             https://www.vitavi.it/magazine
           </a>
@@ -99,8 +99,8 @@ const Home: NextPage = () => {
           Emotion is considered a plus). Separate the UI components into a
           folder with at least a <code>Post</code> component. (use{' '}
           <code>https://randomuser.me/api/portraits/men/--userId--.jpg</code>{' '}
-          for the author's avatar image and <code>https://picsum.photos/</code>{' '}
-          random images for the cover).
+          for the author`&apos;`s avatar image and{' '}
+          <code>https://picsum.photos/</code> random images for the cover).
           <img src="last-posts-ui.png" alt="neulabs logo" />
         </p>
         <hr />
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
           for statement. Performance matters.
         </p>
       </main>
-    </div>
+    </>
   );
 };
 

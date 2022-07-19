@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import React from 'react';
 
 const GET_POSTS = gql`
   query GetPosts {
@@ -12,7 +13,7 @@ const GET_POSTS = gql`
   }
 `;
 
-const Posts: NextPage = () => {
+const Posts: NextPage = (): JSX.Element => {
   const { data } = useQuery(GET_POSTS);
 
   return (
