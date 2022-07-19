@@ -59,7 +59,7 @@ export default [
   {
     userId: 3,
     id: 21,
-    title: 'asperiores ea ipsam voluptatibus modi minima quia sint',
+    title: 'asperiores ea ipsam voluptatibus modi minima quiae',
     category: 'Benessere',
     body: 'repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt',
     date: '2021-07-27T02:34:45.317Z',
