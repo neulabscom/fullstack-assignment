@@ -6,15 +6,7 @@ class UsersApi extends RESTDataSource{
   constructor(){
     super()
     this.baseURL='https://jsonplaceholder.typicode.com/'
-    // this.initialize({} as DataSourceConfig<any>);
   }
-  // async getUsers () {
-  //     const res= await this.get(``)
-  //     if (!res || !res.results.length) {
-  //       return [];
-  //     }
-  //     return res.result
-  // }
   userReducer(user:any){
     return {
       id:user.id,
@@ -23,14 +15,10 @@ class UsersApi extends RESTDataSource{
     }
   }
   async getAllUsers() {
-    const response = await this.get('users');
-    return Array.isArray(response)
-      ? response.map(launch => this.userReducer(launch))
-      : [];
+    return await this.get('users');
   }
 }
 
-// const users= new UsersApi()
 
 const typeDefs = gql`
   type Post {
