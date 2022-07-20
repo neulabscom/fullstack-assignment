@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
-    "@emotion/css": "^11.9.0",
+    "@babel/core": "^7.18.9",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@types/node": "*",
     "graphql": "^16.3.0",
     "next": "12.1.0",
     "react": "17.0.2",

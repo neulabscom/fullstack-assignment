@@ -25,6 +25,7 @@ const typeDefs = gql`
     id: ID
     title: String
     body: String
+    category:String
     userId: ID
   }
 
