@@ -52,7 +52,7 @@ const Posts: NextPage = () => {
         <title>Posts | Neulabs fullstack assignment</title>
       </Head>
       <Page>
-        <h1>Post list {red}</h1>
+        <h1>Post list</h1>
         <Grid>
             {data?.posts?.map((post,index) => 
               postUX({post,user:data?.users.find((user)=>user.id===post.userId),red:index>=red&&index<=red+2})
