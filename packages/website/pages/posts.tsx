@@ -35,7 +35,7 @@ const shortThree=(data:{posts:Array<Post>})=>{
   const sums:Array<number>=[]
   const posts=data.posts
   for (let index = 0; index < posts.length-2; index++) {
-    sums.push(posts[index].title.length+posts[index].title.length+posts[index].title.length)
+    sums.push(posts[index].title.length+posts[index+1].title.length+posts[index+2].title.length)
   }
   return sums.indexOf(Math.min(...sums))
 }
