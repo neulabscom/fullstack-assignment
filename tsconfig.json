@@ -21,10 +21,6 @@
     "inlineSources": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"],
-    "paths": {
-      "@amusi/*": ["packages/*/src/index.ts"]
-    }
+    "strictPropertyInitialization": false
   }
 }

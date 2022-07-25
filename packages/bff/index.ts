@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server';
+
 import posts from './posts';
 
 const typeDefs = gql`
