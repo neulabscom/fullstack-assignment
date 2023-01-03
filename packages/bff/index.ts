@@ -7,7 +7,9 @@ const typeDefs = gql`
     id: ID
     title: String
     body: String
-    userId: ID
+    userId: ID,
+    category: String,
+    date: String,
   }
 
   type Query {
