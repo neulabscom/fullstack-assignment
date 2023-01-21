@@ -1,3 +1,5 @@
+import './global.css';
+
 import { ApolloProvider } from '@apollo/client';
 import type { AppProps } from 'next/app';
 import React from 'react';
